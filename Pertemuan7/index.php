@@ -67,7 +67,7 @@
         <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">ID</th>
+        <th scope="col">NIM</th>
         <th scope="col">Nama</th>
         <th scope="col">Umur</th>
         <th scope="col">Jenis Kelamin</th>
