@@ -78,14 +78,14 @@
       <tbody>
       <?php $no=1; ?>
       <?php
-      while ($pekerja = mysqli_fetch_assoc($result)){ ?>
+      while ($Data_Mahasiswa = mysqli_fetch_assoc($result)){ ?>
         <tr>
           <th scope="row"><?php echo $no; ?></th>
-          <td><?php echo $pekerja['ID']; ?></td>
-          <td><?php echo $pekerja['Nama']; ?></td>
-          <td><?php echo $pekerja['Umur']; ?></td>
-          <td><?php echo $pekerja['Jenis Kelamin']; ?></td>
-          <td> <?php echo $pekerja['Kelas']; ?></td>
+          <td><?php echo $$Data_Mahasiswa['ID']; ?></td>
+          <td><?php echo $$Data_Mahasiswa['Nama']; ?></td>
+          <td><?php echo $$Data_Mahasiswa['Umur']; ?></td>
+          <td><?php echo $$Data_Mahasiswa['Jenis Kelamin']; ?></td>
+          <td> <?php echo $$Data_Mahasiswa['Kelas']; ?></td>
           <td><a href="#" class="class"><i class="fas fa-edit"></i></a>||<a href="Alert.php" class="class"><i class="fas fa-trash-alt"></i></td></a>
         </tr>
       <?php $no++ ?>
