@@ -70,8 +70,10 @@
         <th scope="col">NIM</th>
         <th scope="col">Nama</th>
         <th scope="col">Umur</th>
+        <th scope="col">Agama</th>
         <th scope="col">Jenis Kelamin</th>
         <th scope="col">Kelas</th>
+        <th scope="col">Mata Kuliah</th>
         <th scope="col">Opsi</th>
       </tr>
       </thead>
@@ -84,8 +86,10 @@
           <td><?php echo $Data_Mahasiswa['ID']; ?></td>
           <td><?php echo $Data_Mahasiswa['Nama']; ?></td>
           <td><?php echo $Data_Mahasiswa['Umur']; ?></td>
+          <td><?php echo $Data_Mahasiswa['Agama']; ?></td>
           <td><?php echo $Data_Mahasiswa['Jenis Kelamin']; ?></td>
           <td> <?php echo $Data_Mahasiswa['Kelas']; ?></td>
+          <td><?php echo $Data_Mahasiswa['Mata Kuliah']; ?></td>
           <td><a href="#" class="class"><i class="fas fa-edit"></i></a>||<a href="Alert.php" class="class"><i class="fas fa-trash-alt"></i></td></a>
         </tr>
       <?php $no++ ?>

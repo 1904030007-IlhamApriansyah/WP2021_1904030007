@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 15, 2022 at 05:31 PM
+-- Generation Time: Jan 17, 2022 at 03:56 PM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -29,21 +29,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Data_Mahasiswa` (
-  `ID` varchar(10) NOT NULL,
+  `ID` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Nama` varchar(50) NOT NULL,
   `Umur` int NOT NULL,
+  `Agama` varchar(30) NOT NULL,
   `Jenis Kelamin` varchar(20) NOT NULL,
-  `Kelas` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `Kelas` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Mata Kuliah` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `Data_Mahasiswa`
 --
 
-INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Jenis Kelamin`, `Kelas`) VALUES
-('1904030006', 'Sherly', 20, 'Perempuan', '5B'),
-('1904030007', 'Ilham', 20, 'Laki-laki', '5B'),
-('1904030008', 'Muthu', 20, 'Perempuan', '5B');
+INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis Kelamin`, `Kelas`, `Mata Kuliah`) VALUES
+('1904030006', 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Web Programming'),
+('1904030007', 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Web Programming'),
+('1904030008', 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Web Programming');
 
 --
 -- Indexes for dumped tables
