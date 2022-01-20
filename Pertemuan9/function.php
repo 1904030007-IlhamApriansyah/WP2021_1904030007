@@ -20,4 +20,25 @@ function query($query)
     }
     return $rows;
 }
+
+function tambah ($Data)
+{
+    global $conn;
+
+    $Nama           = ($Data['Nama']);
+    $Umur           = ($Data['Umur']);
+    $Agama          = ($Data['Agama']);
+    $Jenis_Kelamin  = ($Data['Jenis_Kelamin']);
+    $Kelas          = ($Data['Kelas']);
+    $Foto           = ($Data['Foto']);
+
+
+    $query = "INSERT INTO Data_Mahasiswa
+    VALUES 
+    (null,'$Nama','$Umur','$Agama','$Jenis_Kelamin','$Kelas','$Foto');";
+        mysqli_query($conn, $query);
+
+        echo mysqli_error($conn);
+        return mysqli_affected_rows($conn);
+}
 ?>

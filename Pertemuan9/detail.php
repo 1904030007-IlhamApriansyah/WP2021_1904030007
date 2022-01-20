@@ -70,7 +70,7 @@
           <li class="list-group-item active"> Nama : <?= $Data_Mahasiswa['Nama']; ?></li>
           <li class="list-group-item "> Umur : <?= $Data_Mahasiswa['Umur']; ?></li>
           <li class="list-group-item "> Agama : <?= $Data_Mahasiswa['Agama']; ?></li>
-          <li class="list-group-item "> Jenis Kelamin : <?= $Data_Mahasiswa['Jenis Kelamin']; ?> </li>
+          <li class="list-group-item "> Jenis Kelamin : <?= $Data_Mahasiswa['Jenis_Kelamin']; ?> </li>
           <li class="list-group-item "> Kelas : <?= $Data_Mahasiswa['Kelas']; ?></li>
           <li class="list-group-item "> Foto : <?="<img src='Tema/".$Data_Mahasiswa['Foto']."'style='width:100px; height:100px;'>"?></li>
           <li class="list-group-item ">

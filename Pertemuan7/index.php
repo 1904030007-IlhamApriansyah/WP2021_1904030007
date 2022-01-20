@@ -1,7 +1,8 @@
 <?php
   date_default_timezone_get("Asia/Jakarta");
 
-  include 'Koneksi.php';
+  require 'function.php';
+  $Data_Mahasiswa = query("SELECT * FROM Data_Mahasiswa");
 ?>
 
 <!doctype html>
@@ -52,7 +53,7 @@
           <a class="nav-link text-white" href="index.php"><i class="fas fa-table"></i> Data Mahasiswa</a><hr>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#"><i class="far fa-sticky-note"></i> Catatan Mahasiswa</a><hr>
+          <a class="nav-link text-white" href="tambah.php"><i class="far fa-sticky-note"></i> Input Data Mahasiswa</a><hr>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#"><i class="far fa-calendar"></i> Jadwal Mahasiswa</a><hr>
@@ -67,33 +68,22 @@
         <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">NIM</th>
         <th scope="col">Nama</th>
-        <th scope="col">Umur</th>
-        <th scope="col">Agama</th>
-        <th scope="col">Jenis Kelamin</th>
         <th scope="col">Kelas</th>
-        <th scope="col">Foto</th>
         <th scope="col">Opsi</th>
       </tr>
       </thead>
       <tbody>
       <?php $no=1; ?>
-      <?php
-      while ($Data_Mahasiswa = mysqli_fetch_assoc($result)){ ?>
-        <tr>
-          <th scope="row"><?php echo $no; ?></th>
-          <td><?php echo $Data_Mahasiswa['ID']; ?></td>
-          <td><?php echo $Data_Mahasiswa['Nama']; ?></td>
-          <td><?php echo $Data_Mahasiswa['Umur']; ?></td>
-          <td><?php echo $Data_Mahasiswa['Agama']; ?></td>
-          <td><?php echo $Data_Mahasiswa['Jenis Kelamin']; ?></td>
-          <td> <?php echo $Data_Mahasiswa['Kelas']; ?></td>
-          <td><?="<img src='Tema/".$Data_Mahasiswa['Foto']."'style='width:100px; height:100px;'>"?></td>
-          <td><a href="#" class="class"><i class="fas fa-edit"></i></a>||<a href="Alert.php" class="class"><i class="fas fa-trash-alt"></i></td></a>
-        </tr>
-      <?php $no++ ?>
-      <?php } ?>
+        <?php foreach ($Data_Mahasiswa as $Mhs) : ?>
+          <tr>
+            <th scope="row"><?php echo $no; ?></th>
+            <td><?php echo $Mhs['Nama']; ?></td>
+            <td><?php echo $Mhs['Kelas']; ?></td>
+            <td><a href="detail.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-warning" role="button"> detail </a></td>
+          </tr>
+        <?php $no++ ?>
+      <?php endforeach ?>
 
       </tbody>
           </table>

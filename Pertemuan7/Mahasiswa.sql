@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 20, 2022 at 04:17 PM
+-- Generation Time: Jan 20, 2022 at 08:59 PM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Data_Mahasiswa` (
-  `ID` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ID` int NOT NULL,
   `Nama` varchar(50) NOT NULL,
   `Umur` int NOT NULL,
   `Agama` varchar(30) NOT NULL,
-  `Jenis Kelamin` varchar(20) NOT NULL,
+  `Jenis_Kelamin` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Kelas` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -42,10 +42,11 @@ CREATE TABLE `Data_Mahasiswa` (
 -- Dumping data for table `Data_Mahasiswa`
 --
 
-INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis Kelamin`, `Kelas`, `Foto`) VALUES
-('1904030006', 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
-('1904030007', 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Male.png'),
-('1904030008', 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Female.png');
+INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis_Kelamin`, `Kelas`, `Foto`) VALUES
+(1, 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
+(2, 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Male.png'),
+(3, 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
+(4, 'AQQ', 25, 'Islam', 'Perempuan', '5A', 'Female.png');
 
 --
 -- Indexes for dumped tables
@@ -56,6 +57,16 @@ INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis Kelamin`, `K
 --
 ALTER TABLE `Data_Mahasiswa`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Data_Mahasiswa`
+--
+ALTER TABLE `Data_Mahasiswa`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
