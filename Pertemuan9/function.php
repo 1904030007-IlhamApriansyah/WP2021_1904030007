@@ -41,4 +41,11 @@ function tambah ($Data)
         echo mysqli_error($conn);
         return mysqli_affected_rows($conn);
 }
+
+function hapus($id)
+{
+   global $conn;
+   mysqli_query($conn, "DELETE FROM Data_Mahasiswa WHERE id =$id") or die (mysqli_error($conn));
+   return mysqli_affected_rows($conn);
+}
 ?>

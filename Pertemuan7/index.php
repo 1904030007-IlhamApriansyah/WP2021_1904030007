@@ -80,7 +80,7 @@
             <th scope="row"><?php echo $no; ?></th>
             <td><?php echo $Mhs['Nama']; ?></td>
             <td><?php echo $Mhs['Kelas']; ?></td>
-            <td><a href="detail.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-warning" role="button"> detail </a></td>
+            <td><a href="detail.php?id=<?= $Mhs ['id']; ?>" class="btn btn-warning" role="button"> detail </a></td>
           </tr>
         <?php $no++ ?>
       <?php endforeach ?>

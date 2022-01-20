@@ -3,8 +3,8 @@
 
   require 'function.php';
   $ID = $_GET['id'];
-  $Data_Mahasiswa = query("SELECT * FROM Data_Mahasiswa WHERE ID=$ID");
-  var_dump($Data_Mahasiswa[0]['nama']);
+  $Data_Mahasiswa = query("SELECT * FROM Data_Mahasiswa WHERE id=$ID");
+  //var_dump($Data_Mahasiswa[0]['nama']);
 ?>
 
 <!doctype html>
@@ -74,8 +74,8 @@
           <li class="list-group-item "> Kelas : <?= $Data_Mahasiswa['Kelas']; ?></li>
           <li class="list-group-item "> Foto : <?="<img src='Tema/".$Data_Mahasiswa['Foto']."'style='width:100px; height:100px;'>"?></li>
           <li class="list-group-item ">
-            <a href="edit.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-warning" role="button"> Edit </a> |
-            <a href="hapus.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-danger" role="button"> Hapus </a> |
+            <a href="edit.php?id=<?= $Data_Mahasiswa ['id']; ?>" class="btn btn-warning" role="button"> Edit </a> |
+            <a href="hapus.php?id=<?= $Data_Mahasiswa ['id']; ?>" class="btn btn-danger" role="button"> Hapus </a> |
             <a href="index.php" class="btn btn-primary" role="button"> Kembali </a>
           </li>
       </ul>

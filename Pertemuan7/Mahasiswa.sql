@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 20, 2022 at 08:59 PM
+-- Generation Time: Jan 20, 2022 at 10:10 PM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Data_Mahasiswa` (
-  `ID` int NOT NULL,
+  `id` int NOT NULL,
   `Nama` varchar(50) NOT NULL,
   `Umur` int NOT NULL,
   `Agama` varchar(30) NOT NULL,
@@ -42,11 +42,8 @@ CREATE TABLE `Data_Mahasiswa` (
 -- Dumping data for table `Data_Mahasiswa`
 --
 
-INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis_Kelamin`, `Kelas`, `Foto`) VALUES
-(1, 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
-(2, 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Male.png'),
-(3, 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
-(4, 'AQQ', 25, 'Islam', 'Perempuan', '5A', 'Female.png');
+INSERT INTO `Data_Mahasiswa` (`id`, `Nama`, `Umur`, `Agama`, `Jenis_Kelamin`, `Kelas`, `Foto`) VALUES
+(15, 'Ilham', 25, 'Islam', 'Laki-laki', '5A', 'Male.png');
 
 --
 -- Indexes for dumped tables
@@ -56,7 +53,7 @@ INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis_Kelamin`, `K
 -- Indexes for table `Data_Mahasiswa`
 --
 ALTER TABLE `Data_Mahasiswa`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -66,7 +63,7 @@ ALTER TABLE `Data_Mahasiswa`
 -- AUTO_INCREMENT for table `Data_Mahasiswa`
 --
 ALTER TABLE `Data_Mahasiswa`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
