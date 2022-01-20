@@ -72,7 +72,7 @@
           <li class="list-group-item "> Agama : <?= $Data_Mahasiswa['Agama']; ?></li>
           <li class="list-group-item "> Jenis Kelamin : <?= $Data_Mahasiswa['Jenis Kelamin']; ?> </li>
           <li class="list-group-item "> Kelas : <?= $Data_Mahasiswa['Kelas']; ?></li>
-          <li class="list-group-item "> Mata Kuliah : <?= $Data_Mahasiswa['Mata Kuliah']; ?></li>
+          <li class="list-group-item "> Foto : <?="<img src='Tema/".$Data_Mahasiswa['Foto']."'style='width:100px; height:100px;'>"?></li>
           <li class="list-group-item ">
             <a href="edit.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-warning" role="button"> Edit </a> |
             <a href="hapus.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-danger" role="button"> Hapus </a> |

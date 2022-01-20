@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 17, 2022 at 03:56 PM
+-- Generation Time: Jan 20, 2022 at 04:17 PM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -35,17 +35,17 @@ CREATE TABLE `Data_Mahasiswa` (
   `Agama` varchar(30) NOT NULL,
   `Jenis Kelamin` varchar(20) NOT NULL,
   `Kelas` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Mata Kuliah` varchar(30) NOT NULL
+  `Foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `Data_Mahasiswa`
 --
 
-INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis Kelamin`, `Kelas`, `Mata Kuliah`) VALUES
-('1904030006', 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Web Programming'),
-('1904030007', 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Web Programming'),
-('1904030008', 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Web Programming');
+INSERT INTO `Data_Mahasiswa` (`ID`, `Nama`, `Umur`, `Agama`, `Jenis Kelamin`, `Kelas`, `Foto`) VALUES
+('1904030006', 'Sherly', 20, 'Islam', 'Perempuan', '5B', 'Female.png'),
+('1904030007', 'Ilham', 20, 'Islam', 'Laki-laki', '5B', 'Male.png'),
+('1904030008', 'Muthu', 20, 'Islam', 'Perempuan', '5B', 'Female.png');
 
 --
 -- Indexes for dumped tables

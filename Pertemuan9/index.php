@@ -69,7 +69,7 @@
       <tr>
         <th scope="col">No</th>
         <th scope="col">Nama</th>
-        <th scope="col">Kelas</th>
+        <th scope="col">Foto</th>
         <th scope="col">Opsi</th>
       </tr>
       </thead>
@@ -79,7 +79,7 @@
           <tr>
             <th scope="row"><?php echo $no; ?></th>
             <td><?php echo $Mhs['Nama']; ?></td>
-            <td><?php echo $Mhs['Kelas']; ?></td>
+            <td><?="<img src='Tema/".$Data_Mahasiswa['Foto']."'style='width:100px; height:100px;'>"?></td>
             <td><a href="detail.php?id=<?= $Mhs ['ID']; ?>" class="btn btn-warning" role="button"> detail </a></td>
           </tr>
         <?php $no++ ?>
