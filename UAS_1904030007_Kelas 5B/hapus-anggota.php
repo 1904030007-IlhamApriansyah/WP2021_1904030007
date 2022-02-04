@@ -1,9 +1,8 @@
 <?php
-require "function.php";
+require "functions-anggota.php";
 
-//agar tidak bisa dihapus secara pengetikan manual
 if (!isset($_GET['id'])){
-    header("location: index.php");
+    header("location: tables-anggota.php");
     exit;
 }
 
@@ -13,7 +12,7 @@ if(hapus($id) > 0)
     echo 
     "<script>
     alert('data berhasil dihapus');
-    document.location.href = 'index.php';
+    document.location.href = 'tables-anggota.php';
     </script>";
   } else {
     echo
@@ -21,3 +20,4 @@ if(hapus($id) > 0)
     alert('data gagal dihapus');
     </script>";
 }
+?>

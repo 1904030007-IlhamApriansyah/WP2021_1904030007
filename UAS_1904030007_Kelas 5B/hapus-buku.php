@@ -1,19 +1,18 @@
 <?php
-require "function.php";
+require "functions-buku.php";
 
-//agar tidak bisa dihapus secara pengetikan manual
 if (!isset($_GET['id'])){
-    header("location: data_dosen.php");
+    header("location: tables-buku.php");
     exit;
 }
 
 $id = $_GET['id'];
-if(hapus_dosen($id) > 0)
+if(hapus($id) > 0)
 {
     echo 
     "<script>
     alert('data berhasil dihapus');
-    document.location.href = 'data_dosen.php';
+    document.location.href = 'tables-buku.php';
     </script>";
   } else {
     echo
@@ -21,3 +20,4 @@ if(hapus_dosen($id) > 0)
     alert('data gagal dihapus');
     </script>";
 }
+?>
